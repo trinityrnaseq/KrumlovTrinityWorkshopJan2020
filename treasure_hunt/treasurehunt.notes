@@ -1,0 +1,50 @@
+
+Starting: give url to initial instructions including link to decoder and initial fasta files.
+https://docs.google.com/document/d/1l3oZ7OvK5e-cbiU5WfBq4IiuA3PYByXh66hbGf7JhLA/edit?usp=sharing
+https://tinyurl.com/v5qpkap
+
+reads at: https://drive.google.com/drive/folders/1ZeYEjlEIDgg9oU9bmapxHttm6qsqnunM?usp=sharing
+tinyurl: tzzehsz
+
+decoder at: https://drive.google.com/open?id=1dPW7MWlJxKqwMX4D_mJPf7aVYn5rLxVc
+tinyurl: https://tinyurl.com/wm898vw
+
+stage1 decipher message:
+
+LINE01 congrats on completing
+LINE05 extension r7p5yve
+LINE02 the first part
+LINE06 for further instructions.
+LINE04 the url http://tinyurl.com with
+LINE03 of your journey.  visit
+
+./trinity_msg_decoder "LINE01 congrats on completing
+> LINE05 extension r7p5yve
+> LINE02 the first part
+> LINE06 for further instructions.
+> LINE04 the url http://tinyurl.com with
+> LINE03 of your journey.  visit
+> " > test.seq
+
+This leads to the 2nd instructions, pointing to another set of instructions and fasta files:
+https://docs.google.com/document/d/1UyJTCHcFzBbaXf3U9c3wl6StpJKStE0EDyZ_yIdC0m8/edit?usp=sharing
+www.tinyurl.com/r7p5yve
+
+reads at: https://drive.google.com/drive/folders/1T_tD8JYPpx6DMt_3CF5S-YslnbPr_6m3?usp=sharing
+tinyurl: vnuyxh8
+
+~/GITHUB/trinityrnaseq/util/misc/simulate_illuminaPE_from_transcripts.pl --transcripts test.seq
+
+LINE0 decoded: yay you did it. go add your name to the leaderboard using tinyurl with extension yacqz6pw
+
+../trinity_msg_decoder "LINE0 decoded: yay you did it. go add
+> LINE1 your name to the
+> LINE2 leaderboard using tinyurl
+> LINE3 with extension qrgkswp
+> " > stage2.seq
+
+~/GITHUB/trinityrnaseq/util/misc/simulate_illuminaPE_from_transcripts.pl --transcripts stage2.seq
+
+which goes to the final leaderboard page.
+
+
